@@ -660,6 +660,10 @@ public class MinecraftInstance {
         }
     }
 
+    public void ensureResettingWindowState() {
+        ensureResettingWindowState(false);
+    }
+
     public void ensureResettingWindowState(boolean offload) {
         JultiOptions options = JultiOptions.getJultiOptions();
         Rectangle bounds = new Rectangle(options.windowPos[0], options.windowPos[1], options.resettingWindowSize[0], options.resettingWindowSize[1]);

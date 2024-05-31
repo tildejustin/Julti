@@ -89,7 +89,7 @@ public class ControlPanel extends JPanel {
                         Thread.currentThread().setName("julti-gui");
                         SleepBGUtil.disableLock();
                         // ensure instance is unfullscreened and unminimized
-                        Julti.doLater(() -> DoAllFastUtil.doAllFast(minecraftInstance -> minecraftInstance.ensureInitialWindowState()));
+                        Julti.doLater(() -> DoAllFastUtil.doAllFast(MinecraftInstance::ensureInitialWindowState));
                     }
                 });
             }
@@ -100,7 +100,7 @@ public class ControlPanel extends JPanel {
                         Thread.currentThread().setName("julti-gui");
                         SleepBGUtil.disableLock();
                         // ensure instance is at playing size
-                        Julti.doLater(() -> DoAllFastUtil.doAllFast(minecraftInstance -> minecraftInstance.ensurePlayingWindowState()));
+                        Julti.doLater(() -> DoAllFastUtil.doAllFast(MinecraftInstance::ensurePlayingWindowState));
                     }
                 });
             }
